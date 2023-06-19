@@ -2,7 +2,7 @@
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
-const { composePlugins, withNx } = require('@nx/next');
+const { withNx } = require('@nx/next');
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
@@ -17,27 +17,20 @@ const nextConfig = {
     config.infrastructureLogging = {
       level: 'error',
     };
-    const { isServer } = options;
     config.plugins.push(new NextFederationPlugin({
-      name: 'host',
+      name: 'remote',
       filename: 'static/chunks/remoteEntry.js',
-      exposes: {
-      },
       remotes: {
-        remote: `remote@http://localhost:5201/_next/static/${
-          isServer ? 'ssr' : 'chunks'
-        }/remoteEntry.js`,
       },
       shared: {
       },
       extraOptions: {
+        exposePages: true,
         debug: false,
       },
     }));
-
-
     return config;
   },
 };
 
-module.exports = module.exports = withNx(nextConfig);
+module.exports = withNx(nextConfig);
