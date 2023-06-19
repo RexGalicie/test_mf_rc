@@ -18,7 +18,7 @@ Clone the repository:
 
 ```bash
 git clone git@github.com:RexGalicie/test_mf_rc.git
-cd your-repository
+cd test_mf_rc
 ```
 
 Install dependencies:
