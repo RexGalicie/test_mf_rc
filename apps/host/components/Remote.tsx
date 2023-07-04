@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 
 //@ts-ignore
 const RemoteIndex = dynamic(() => import('remote/pages/index'), {
-  ssr: false,
+  ssr: true,
 });
 
 export const RemoteApp = () => {

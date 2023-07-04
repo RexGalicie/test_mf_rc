@@ -2,7 +2,7 @@
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
-const { composePlugins, withNx } = require('@nx/next');
+const { withNx } = require('@nx/next');
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
@@ -31,7 +31,6 @@ const nextConfig = {
       shared: {
       },
       extraOptions: {
-        debug: false,
       },
     }));
 

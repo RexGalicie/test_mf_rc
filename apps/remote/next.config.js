@@ -26,7 +26,6 @@ const nextConfig = {
       },
       extraOptions: {
         exposePages: true,
-        debug: false,
       },
     }));
     return config;
