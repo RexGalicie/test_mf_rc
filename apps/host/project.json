@@ -12,9 +12,6 @@
         "outputPath": "dist/apps/host"
       },
       "configurations": {
-        "development": {
-          "outputPath": "apps/host"
-        },
         "production": {}
       }
     },

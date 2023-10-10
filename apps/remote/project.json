@@ -12,9 +12,6 @@
         "outputPath": "dist/apps/remote"
       },
       "configurations": {
-        "development": {
-          "outputPath": "apps/remote"
-        },
         "production": {}
       }
     },
